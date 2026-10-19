@@ -1,0 +1,8 @@
+/* Styles provisoires (le design complet arrive dans une étape suivante) */
+body { font-family: system-ui, sans-serif; margin: 0; padding: 1rem; }
+.grille { display: flex; flex-wrap: wrap; gap: 1rem; }
+.carte { width: 220px; border: 1px solid #ccc; border-radius: 8px; padding: 1rem; position: relative; }
+.carte-visuel { height: 140px; background: #eee; }
+.carte-indispo { filter: grayscale(1); opacity: .6; }
+.message-erreur { color: crimson; }
+.formulaire label { display: block; margin: .5rem 0; }
