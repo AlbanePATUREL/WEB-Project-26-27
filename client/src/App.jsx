@@ -17,6 +17,10 @@ export default function App() {
       </main>
       {/* Un seul Canvas WebGL pour tous les modèles 3D du site */}
       <ScenePartagee />
+      <footer className="footer">
+        <p>WOOHP Store — l'équipement des meilleures espionnes.</p>
+        <p className="footer-note">Projet étudiant ECE Paris · ING4 · Boutique fictive, visuels 100 % originaux.</p>
+      </footer>
     </>
   )
 }

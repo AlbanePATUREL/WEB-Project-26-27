@@ -43,7 +43,7 @@ function Compowder({ actif, c }) {
   }
 
   return (
-    <group rotation={[0.6, 0, 0]} position={[0, -0.25, 0]} scale={0.95}>
+    <group rotation={[0.6, 0, 0]} position={[0, -0.05, 0]} scale={0.9}>
       {/* Boîtier */}
       <mesh position={[0, -0.1, 0]}>
         <cylinderGeometry args={[0.9, 0.9, 0.24, 64]} />

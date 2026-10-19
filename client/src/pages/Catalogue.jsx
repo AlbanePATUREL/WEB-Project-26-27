@@ -1,8 +1,10 @@
 import { useState } from 'react'
+import { View } from '@react-three/drei'
 import { useGadgets } from '../useGadgets.js'
 import { CATEGORIES } from '../constantes.js'
 import CarteGadget from '../components/CarteGadget.jsx'
 import EtatChargement from '../components/EtatChargement.jsx'
+import Gadget3D from '../components/3d/Gadget3D.jsx'
 
 // Page client : catalogue des gadgets avec recherche et filtres
 export default function Catalogue() {
@@ -10,6 +12,7 @@ export default function Catalogue() {
   const [recherche, setRecherche] = useState('')
   const [categorie, setCategorie] = useState('Toutes')
   const [dispoSeulement, setDispoSeulement] = useState(false)
+  const [survolHero, setSurvolHero] = useState(false)
 
   // Compteurs sur l'ensemble du stock
   const nbDispo = gadgets.filter((g) => g.disponible).length
@@ -24,13 +27,31 @@ export default function Catalogue() {
   return (
     <div className="page">
       <section className="hero">
-        <p className="hero-surtitre">Catalogue officiel des agentes</p>
-        <h1>L'équipement des meilleures espionnes</h1>
-        {!chargement && !erreur && (
-          <p className="compteur">
-            <strong>{nbDispo}</strong> gadgets au QG · <strong>{nbMission}</strong> en mission
+        <div className="hero-texte">
+          <p className="hero-surtitre">Catalogue officiel · Agentes certifiées</p>
+          <h1>
+            L'équipement des <em>meilleures espionnes</em>
+          </h1>
+          <p className="hero-intro">
+            Poudriers communicants, rouges à lèvres laser, talons à réaction : tout l'arsenal glamour
+            pour réussir ta prochaine mission, livré directement depuis le QG.
           </p>
-        )}
+          {!chargement && !erreur && (
+            <p className="compteur">
+              <span className="pastille pastille-menthe">{nbDispo} gadgets au QG</span>
+              <span className="compteur-separateur">/</span>
+              <span className="pastille pastille-rose">{nbMission} en mission</span>
+            </p>
+          )}
+        </div>
+        {/* Gadget vedette en grand (survol = ouverture du Compowder) */}
+        <View
+          className="hero-3d"
+          onPointerEnter={() => setSurvolHero(true)}
+          onPointerLeave={() => setSurvolHero(false)}
+        >
+          <Gadget3D visuel="compowder" actif={survolHero} />
+        </View>
       </section>
 
       <div className="filtres">

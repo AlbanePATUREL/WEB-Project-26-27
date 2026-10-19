@@ -57,7 +57,7 @@ export default function Gadget3D({ visuel, actif = false, desature = false }) {
 
   return (
     <>
-      <PerspectiveCamera makeDefault position={[0, 0.35, 4.6]} fov={35} />
+      <PerspectiveCamera makeDefault position={[0, 0.3, 4.1]} fov={35} />
 
       {/* Éclairage : reflets de l'environnement + lumières colorées de la marque */}
       <SecoursEnvironnement>

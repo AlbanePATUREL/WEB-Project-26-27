@@ -19,13 +19,13 @@ export default function ScenePartagee() {
   return (
     <Canvas
       className="scene-partagee"
+      // Fixé sur toute la fenêtre, transparent, et les clics le traversent
+      style={{ position: 'fixed', inset: 0, zIndex: 5, pointerEvents: 'none' }}
       // frameloop "always" : les modèles sont animés en continu (rotation, flottement)
       frameloop="always"
       // dpr limité : jamais plus de 1,5 pixel réel par pixel CSS (écrans Retina = 2 ou 3)
       dpr={dpr}
       gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
-      // Le canvas couvre toute la fenêtre (CSS) ; les clics le traversent
-      eventSource={document.getElementById('root')}
     >
       <PerformanceMonitor onDecline={() => setDpr(1)} onIncline={() => setDpr(1.5)} />
       {/* Chaque <View> déclarée dans la page vient se dessiner ici */}

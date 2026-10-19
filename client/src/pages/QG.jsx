@@ -15,9 +15,11 @@ export default function QG() {
   return (
     <div className="page">
       <section className="hero hero-qg">
-        <p className="hero-surtitre">Accès réservé · Niveau 5</p>
-        <h1>QG de Jerry</h1>
-        <p className="compteur">Gestion de l'arsenal du WOOHP Store</p>
+        <div className="hero-texte">
+          <p className="hero-surtitre">Accès réservé · Niveau 5</p>
+          <h1>QG de Jerry</h1>
+          <p className="hero-intro">Ajoute, modifie ou envoie en mission les gadgets du WOOHP Store.</p>
+        </div>
       </section>
 
       <div className="qg">
