@@ -2,6 +2,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import Header from './components/Header.jsx'
 import Catalogue from './pages/Catalogue.jsx'
 import QG from './pages/QG.jsx'
+import ScenePartagee from './components/3d/ScenePartagee.jsx'
 
 export default function App() {
   return (
@@ -14,6 +15,8 @@ export default function App() {
           <Route path="*" element={<div className="page etat"><p className="etat-titre">Page introuvable</p><Link to="/">Retour au catalogue</Link></div>} />
         </Routes>
       </main>
+      {/* Un seul Canvas WebGL pour tous les modèles 3D du site */}
+      <ScenePartagee />
     </>
   )
 }

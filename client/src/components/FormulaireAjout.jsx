@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { creerGadget } from '../api.js'
 import { CATEGORIES, VISUELS } from '../constantes.js'
+import { View } from '@react-three/drei'
+import Gadget3D from './3d/Gadget3D.jsx'
 
 // Valeurs du formulaire vide
 const FORMULAIRE_VIDE = { nom: '', prix: '', categorie: 'Communication', visuel: 'compowder' }
@@ -65,7 +67,10 @@ export default function FormulaireAjout({ onAjout }) {
         </select>
       </label>
 
-      <div className="apercu" />
+      {/* Aperçu 3D du visuel choisi (toujours animé) */}
+      <View className="apercu">
+        <Gadget3D visuel={formulaire.visuel} actif />
+      </View>
 
       {erreur && <p className="message-erreur" role="alert">⚠ {erreur}</p>}
 
