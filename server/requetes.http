@@ -1,0 +1,83 @@
+### =========================================================
+### Tests de l'API WOOHP Store
+### (extension VS Code « REST Client » : cliquer sur « Send Request »)
+### =========================================================
+@api = http://localhost:3000
+
+### Santé — 200
+GET {{api}}/
+
+### Liste des gadgets — 200
+GET {{api}}/gadgets
+
+### Création OK — 201
+POST {{api}}/gadgets
+Content-Type: application/json
+
+{ "nom": "Stylo fumigène", "prix": 45, "categorie": "Évasion", "visuel": "default" }
+
+### Création — 400 : nom vide
+POST {{api}}/gadgets
+Content-Type: application/json
+
+{ "nom": "", "prix": 45, "categorie": "Évasion" }
+
+### Création — 400 : prix absent
+POST {{api}}/gadgets
+Content-Type: application/json
+
+{ "nom": "Stylo fumigène", "categorie": "Évasion" }
+
+### Création — 400 : prix non numérique
+POST {{api}}/gadgets
+Content-Type: application/json
+
+{ "nom": "Stylo fumigène", "prix": "gratuit", "categorie": "Évasion" }
+
+### Création — 400 : prix négatif
+POST {{api}}/gadgets
+Content-Type: application/json
+
+{ "nom": "Stylo fumigène", "prix": -5, "categorie": "Évasion" }
+
+### Création — 400 : catégorie invalide
+POST {{api}}/gadgets
+Content-Type: application/json
+
+{ "nom": "Stylo fumigène", "prix": 45, "categorie": "Cuisine" }
+
+### Création — 400 : formulaire vide
+POST {{api}}/gadgets
+Content-Type: application/json
+
+{}
+
+### Modification partielle (dispo) — 200
+PUT {{api}}/gadgets/1
+Content-Type: application/json
+
+{ "disponible": false }
+
+### Modification nom + prix — 200
+PUT {{api}}/gadgets/1
+Content-Type: application/json
+
+{ "nom": "Compowder Pro", "prix": 399 }
+
+### Modification — 400 : prix négatif
+PUT {{api}}/gadgets/1
+Content-Type: application/json
+
+{ "prix": -1 }
+
+### Modification — 404 : id inexistant
+PUT {{api}}/gadgets/99999
+Content-Type: application/json
+
+{ "disponible": true }
+
+### Suppression — 204 (adapter l'id !)
+DELETE {{api}}/gadgets/13
+
+### Suppression — 404 : id inexistant
+DELETE {{api}}/gadgets/99999

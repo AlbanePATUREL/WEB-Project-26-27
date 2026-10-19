@@ -1,0 +1,13 @@
+nom,prix,categorie,visuel,disponible
+Compowder,349.90,Communication,compowder,true
+Rouge à lèvres laser,129.00,Attaque,lipstick-laser,true
+Sèche-cheveux grappin,219.50,Évasion,hairdryer-grapple,true
+Lunettes à rayons X,189.00,Infiltration,xray-glasses,false
+Talons-propulseurs,279.00,Évasion,rocket-heels,true
+Bracelet lasso,89.90,Attaque,lasso-bracelet,true
+Parfum soporifique,64.50,Infiltration,sleep-perfume,true
+Sac à dos jetpack,899.00,Évasion,jetpack,false
+Boucles d'oreilles micro-espion,149.00,Communication,spy-earrings,true
+Vernis à ongles acide,39.90,Beauté-Tech,acid-polish,true
+Gloss caméra,74.00,Beauté-Tech,lipgloss-camera,false
+Ceinture boomerang,159.00,Attaque,boomerang-belt,true

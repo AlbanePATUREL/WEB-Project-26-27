@@ -1,0 +1,12 @@
+# Dépendances
+node_modules/
+
+# Variables d'environnement (contiennent les clés secrètes !)
+.env
+.env.local
+
+# Build du front
+dist/
+
+# Fichiers système
+.DS_Store
