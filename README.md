@@ -3,6 +3,8 @@
 Projet web ECE Paris · ING4 — boutique de gadgets d'espionnes inspirée de l'univers *Totally Spies*.
 Tous les visuels (logo, modèles 3D) sont des **créations originales** : aucun asset officiel de la série.
 
+> 👥 Organisation de l'équipe, rôles et workflow Git : voir [ORGANISATION.md](ORGANISATION.md).
+
 ---
 
 ## 1. Le pitch (30 secondes)
