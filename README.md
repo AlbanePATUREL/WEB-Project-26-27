@@ -1,4 +1,4 @@
-# 🕵️‍♀️ WOOHP Store — *L'équipement des meilleures espionnes*
+# 🕵️‍♀️ Beverly Gadgets — *L'équipement des meilleures espionnes*
 
 Projet web ECE Paris · ING4 — boutique de gadgets d'espionnes inspirée de l'univers *Totally Spies*.
 Tous les visuels (logo, modèles 3D) sont des **créations originales** : aucun asset officiel de la série.
@@ -9,7 +9,7 @@ Tous les visuels (logo, modèles 3D) sont des **créations originales** : aucun 
 
 ## 1. Le pitch (30 secondes)
 
-Les agentes de terrain ont besoin d'un équipement aussi efficace que stylé. **WOOHP Store** est la
+Les agentes de terrain ont besoin d'un équipement aussi efficace que stylé. **Beverly Gadgets** est la
 boutique officielle de l'organisation : poudriers-communicateurs, rouges à lèvres laser, talons à
 réaction… Chaque gadget est présenté en **3D animée** : survole la carte et le gadget s'active
 (le laser s'allume, le jetpack décolle, le Compowder s'ouvre).
@@ -162,7 +162,7 @@ Toutes les erreurs sont renvoyées en JSON : `{ "erreur": "message en français"
 4. Onglet **Environment** → ajouter :
    - `SUPABASE_URL` = l'URL du projet
    - `SUPABASE_SECRET_KEY` = la secret key
-   - `FRONT_URL` = l'URL Netlify (à ajouter **après** l'étape 5.2, ex : `https://woohp-store.netlify.app`, sans `/` final)
+   - `FRONT_URL` = l'URL Netlify (à ajouter **après** l'étape 5.2, ex : `https://beverly-gadgets.netlify.app`, sans `/` final)
    - (ne pas définir `PORT` : Render le fournit tout seul)
 5. **Create Web Service**, attendre « Live », puis tester `https://<nom>.onrender.com/gadgets`.
 

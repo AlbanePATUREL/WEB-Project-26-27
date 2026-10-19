@@ -5,11 +5,11 @@ export default function Header() {
   return (
     <header className="header">
       <div className="header-contenu">
-        <NavLink to="/" className="marque" aria-label="WOOHP Store, accueil">
+        <NavLink to="/" className="marque" aria-label="Beverly Gadgets, accueil">
           <Logo />
           <span className="marque-texte">
-            <span className="marque-nom">WOOHP</span>
-            <span className="marque-store">Store</span>
+            <span className="marque-nom">Beverly</span>
+            <span className="marque-store">Gadgets</span>
           </span>
         </NavLink>
         <nav className="nav">
