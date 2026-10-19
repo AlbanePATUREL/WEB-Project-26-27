@@ -1,5 +1,5 @@
 ### =========================================================
-### Tests de l'API WOOHP Store
+### Tests de l'API Beverly Gadgets
 ### (extension VS Code « REST Client » : cliquer sur « Send Request »)
 ### =========================================================
 @api = http://localhost:3000

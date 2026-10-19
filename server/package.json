@@ -1,7 +1,7 @@
 {
-  "name": "woohp-store-server",
+  "name": "beverly-gadgets-server",
   "version": "1.0.0",
-  "description": "API Express du WOOHP Store (relais entre le front React et Supabase)",
+  "description": "API Express de Beverly Gadgets (relais entre le front React et Supabase)",
   "type": "module",
   "main": "index.js",
   "scripts": {

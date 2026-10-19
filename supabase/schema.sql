@@ -1,5 +1,5 @@
 -- =========================================================
--- WOOHP Store — schéma de la base Supabase (Postgres)
+-- Beverly Gadgets — schéma de la base Supabase (Postgres)
 -- À exécuter dans Supabase > SQL Editor > New query > Run
 -- =========================================================
 

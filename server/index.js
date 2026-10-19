@@ -1,5 +1,5 @@
 // =========================================================
-// index.js — API Express du WOOHP Store
+// index.js — API Express de Beverly Gadgets
 // React (Netlify) ──▶ cette API (Render) ──▶ Supabase
 // =========================================================
 import { supabase } from './supabaseClient.js' // charge aussi le .env
@@ -29,7 +29,7 @@ function lireId(req) {
 
 // --- GET / : route de santé (pour réveiller Render avant la démo) ---
 app.get('/', (req, res) => {
-  res.json({ message: '🕵️‍♀️ API du WOOHP Store opérationnelle', date: new Date().toISOString() })
+  res.json({ message: '🕵️‍♀️ API Beverly Gadgets opérationnelle', date: new Date().toISOString() })
 })
 
 // --- GET /gadgets : liste complète triée par id ---
@@ -93,5 +93,5 @@ app.use((err, req, res, next) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`🚀 API WOOHP Store sur http://localhost:${PORT}`)
+  console.log(`🚀 API Beverly Gadgets sur http://localhost:${PORT}`)
 })

@@ -1,4 +1,4 @@
-// Logo original du WOOHP Store : un cœur-œil d'espionne (création maison, SVG pur)
+// Logo original de Beverly Gadgets : un cœur-œil d'espionne (création maison, SVG pur)
 export default function Logo({ taille = 40 }) {
   return (
     <svg width={taille} height={taille} viewBox="0 0 48 48" aria-hidden="true" className="logo-icone">
